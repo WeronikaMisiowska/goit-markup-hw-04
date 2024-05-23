@@ -20,6 +20,9 @@ img {
 
 .header{
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .container{
@@ -89,11 +92,24 @@ img {
     padding: 24px 0;
     text-decoration: none;
     display: inline-block;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation .logo-studio-navigation:hover,
 .navigation .logo-studio-navigation:focus{
     color: #404bbf
+}
+
+.studio::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
 }
 
 
@@ -119,6 +135,7 @@ img {
 .contact .e-mail {
     color: #434455;
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact .e-mail:hover,
@@ -137,7 +154,8 @@ img {
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 1440px 600px;
+    background-size: cover;
+    max-width: 1440 px;
 }
 
 .title-main{
@@ -170,6 +188,8 @@ img {
         height: 56px;
         border: none;
         border-radius: 4px;
+
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title .button:hover,
@@ -202,6 +222,17 @@ img {
 
 .work-list .work-item {
     width: calc((100% - 72px) / 4);
+}
+
+.work-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #F4F4FD;
+    border-radius: 4px;
+    border: 1px solid;
+    margin-bottom: 8px;
 }
 
 .work-list .solutions {
