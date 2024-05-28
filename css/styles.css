@@ -403,6 +403,10 @@ img {
                 0px 1px 6px 0px #2E2F4214;
 }
 
+.portfolio-item:hover .portfolio-img-p{
+    transform: translateY(0%)
+}
+
 .portfolio-img{
     position: relative;
     overflow: hidden;
